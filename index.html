@@ -41,16 +41,18 @@
             var names = ["jsmith123@gmail.com", "mthomasjohnson@yahoo.com", "sophiarose_davis@hotmail.com", "miaebrown@outlook.com", "ethanwilson@gmail.com", "isabellamiller@yahoo.com", "williamtaylor@hotmail.com", "avanicoleanderson@outlook.com", "jamesdmartin@gmail.com", "charlottesophialee@yahoo.com", "oliverclark@hotmail.com", "ameliawilson@outlook.com", "benjaminthompson@gmail.com", "emilyanderson@yahoo.com", "lucaswilson@hotmail.com", "abigaildavis@outlook.com", "masonclark@gmail.com", "madisonwilson@yahoo.com", "elijahdavis@hotmail.com", "elizabethmiller@outlook.com"];
             return names[Math.floor(Math.random() * names.length)];
         };
-
+        const number = Math.floor(Math.random() * 1000000000);
         var queue = [];
         function userloveq(method, args) { !!userloveMethods && userloveMethods[method] ? userloveMethods[method](args) : queue.push({ method: method, args: args }); } (function (l, o, v, e) { l["a_id"] = e; l["dm"] = l.location.hostname; l[v] = l[v] || []; if (l[o]) return; l[o] = {}; var s = document.createElement("script"); s.async = true; s.src = "https://cdn.userlove.dev/wrapper.js?v=" + Date.now(); var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); })(window, "userloveMethods", "userloveDL", "1EFE9RKLRE");
-        userloveq("identify", {
-            id: Math.random().toString(16).slice(2), // Replace with your unique user ID
-            userData: {
-                name: randomName(), // Replace with your user's last name
-                email: randomEmail(), // Replace with your user's email
-            },
-        });
+        if (number % 2 == 0) {
+            userloveq("identify", {
+                id: Math.random().toString(16).slice(2), // Replace with your unique user ID
+                userData: {
+                    name: randomName(), // Replace with your user's last name
+                    email: randomEmail(), // Replace with your user's email
+                },
+            });
+        }
     </script>
 </head>
 
