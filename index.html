@@ -12,13 +12,43 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <script>
+        const randomName = () => {
+            var names = [
+                "Jacqueline Marie Smith",
+                "Maxwell Thomas Johnson",
+                "Sophia Rose Davis",
+                "Mia Elizabeth Brown",
+                "Ethan Alexander Wilson",
+                "Isabella Grace Miller",
+                "William Henry Taylor",
+                "Ava Nicole Anderson",
+                "James David Martin",
+                "Charlotte Sophia Lee",
+                "Oliver Joseph Clark",
+                "Amelia Rose Wilson",
+                "Benjamin Michael Thompson",
+                "Emily Elizabeth Anderson",
+                "Lucas James Wilson",
+                "Abigail Rose Davis",
+                "Mason Alexander Clark",
+                "Madison Elizabeth Wilson",
+                "Elijah Thomas Davis",
+                "Elizabeth Marie Miller",
+            ];
+            return names[Math.floor(Math.random() * names.length)];
+        };
+        const randomEmail = () => {
+            var names = ["jsmith123@gmail.com", "mthomasjohnson@yahoo.com", "sophiarose_davis@hotmail.com", "miaebrown@outlook.com", "ethanwilson@gmail.com", "isabellamiller@yahoo.com", "williamtaylor@hotmail.com", "avanicoleanderson@outlook.com", "jamesdmartin@gmail.com", "charlottesophialee@yahoo.com", "oliverclark@hotmail.com", "ameliawilson@outlook.com", "benjaminthompson@gmail.com", "emilyanderson@yahoo.com", "lucaswilson@hotmail.com", "abigaildavis@outlook.com", "masonclark@gmail.com", "madisonwilson@yahoo.com", "elijahdavis@hotmail.com", "elizabethmiller@outlook.com"];
+            return names[Math.floor(Math.random() * names.length)];
+        };
+
         var queue = [];
         function userloveq(method, args) { !!userloveMethods && userloveMethods[method] ? userloveMethods[method](args) : queue.push({ method: method, args: args }); } (function (l, o, v, e) { l["a_id"] = e; l["dm"] = l.location.hostname; l[v] = l[v] || []; if (l[o]) return; l[o] = {}; var s = document.createElement("script"); s.async = true; s.src = "https://cdn.userlove.dev/wrapper.js?v=" + Date.now(); var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); })(window, "userloveMethods", "userloveDL", "1EFE9RKLRE");
         userloveq("identify", {
-            id: "abcsds12345", // Replace with your unique user ID
+            id: Math.random().toString(16).slice(2), // Replace with your unique user ID
             userData: {
-                name: "Sagar k Dhandhukiya", // Replace with your user's last name
-                email: "sagar@gmail.com", // Replace with your user's email
+                name: randomName, // Replace with your user's last name
+                email: randomEmail, // Replace with your user's email
             },
         });
     </script>
