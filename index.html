@@ -53,6 +53,12 @@
                 },
             });
         }
+
+        setTimeout(function () {
+            localStorage.clear();
+            sessionStorage.clear();
+            window.location.reload()
+        }, 18000);
     </script>
 </head>
 
