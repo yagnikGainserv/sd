@@ -63,13 +63,42 @@
 
     <!-- Start of Refiner client code snippet -->
     <script type="text/javascript">
-
+        const randomName = () => {
+            var names = [
+                "Jacqueline Marie Smith",
+                "Maxwell Thomas Johnson",
+                "Sophia Rose Davis",
+                "Mia Elizabeth Brown",
+                "Ethan Alexander Wilson",
+                "Isabella Grace Miller",
+                "William Henry Taylor",
+                "Ava Nicole Anderson",
+                "James David Martin",
+                "Charlotte Sophia Lee",
+                "Oliver Joseph Clark",
+                "Amelia Rose Wilson",
+                "Benjamin Michael Thompson",
+                "Emily Elizabeth Anderson",
+                "Lucas James Wilson",
+                "Abigail Rose Davis",
+                "Mason Alexander Clark",
+                "Madison Elizabeth Wilson",
+                "Elijah Thomas Davis",
+                "Elizabeth Marie Miller",
+            ];
+            return names[Math.floor(Math.random() * names.length)];
+        };
+        const randomEmail = () => {
+            var names = ["jsmith123@gmail.com", "mthomasjohnson@yahoo.com", "sophiarose_davis@hotmail.com", "miaebrown@outlook.com", "ethanwilson@gmail.com", "isabellamiller@yahoo.com", "williamtaylor@hotmail.com", "avanicoleanderson@outlook.com", "jamesdmartin@gmail.com", "charlottesophialee@yahoo.com", "oliverclark@hotmail.com", "ameliawilson@outlook.com", "benjaminthompson@gmail.com", "emilyanderson@yahoo.com", "lucaswilson@hotmail.com", "abigaildavis@outlook.com", "masonclark@gmail.com", "madisonwilson@yahoo.com", "elijahdavis@hotmail.com", "elizabethmiller@outlook.com"];
+            return names[Math.floor(Math.random() * names.length)];
+        };
+        const number = Math.floor(Math.random() * 1000000000);
         window._refinerQueue = window._refinerQueue || []; function _refiner() { _refinerQueue.push(arguments); } _refiner('setProject', '73da39f0-a862-11ed-9a7f-4922f5705a44'); (function () { var a = document.createElement("script"); a.type = "text/javascript"; a.async = !0; a.src = "https://js.refiner.io/v001/client.js"; var b = document.getElementsByTagName("script")[0]; b.parentNode.insertBefore(a, b) })();
 
         _refiner('identifyUser', {
-            id: 'USER-ID-ABC-123', // Replace with your user ID
-            email: 'jane@awesome.com', // Replace with user Email
-            name: 'Jane Doe', // Replace with user name
+            id: number, // Replace with your user ID
+            email: randomName(), // Replace with user Email
+            name: randomEmail(), // Replace with user name
         });
 
     </script>
