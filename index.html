@@ -26,7 +26,7 @@ sessionStorage.clear();
       	var queue = []; function userlove(method, args) { (!!userloveMethods && userloveMethods[method]) ? userloveMethods[method](args) : queue.push({ method: method, args: args }); } (function (l, o, v, e) { l["a_id"] = e; l["dm"] = l.location.hostname; l[v] = l[v] || []; if (l[o]) return; l[o] = {}; var s = document.createElement("script"); s.async = true; s.src = "http://localhost:3004/wrapper.dev.js?v=" + Date.now(); var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); })(window, "userloveMethods", "userloveDL", "GON7D25PJK")
   if (!Math.round(Math.random())) {
 
-            userloveq("identify", {
+            userlove("identify", {
                 id: Math.random().toString(16).slice(2), // Replace with your unique user ID (required)
                 userData: {
                     // recommended properties for personalization (optional)
