@@ -13,7 +13,7 @@
 
 
 
-<script> 
+<!-- <script> 
 
       setTimeout (() => { window.location.reload(); }, 15000);
 localStorage.clear();
@@ -42,7 +42,13 @@ var userloveq = []; function userlove(method, args) { (!!userloveMethods && user
                 },
             });
         }
-    </script>
+    </script> -->
+
+	<!-- Start of Userlove Code Snippet -->
+<script>
+    var userloveq = []; function userlove(method, args) { (!!userloveMethods && userloveMethods[method]) ? userloveMethods[method](args) : userloveq.push({ method: method, args: args }); } (function (l, o, v, e) { if (l["a_id"]) { return; } l["a_id"] = e; l["dm"] = l.location.hostname; l[v] = l[v] || []; l[o] = {}; var s = document.createElement("script"); s.async = true; s.src = "http://userlove.api:3004/wrapper.dev.js?v=" + Date.now(); var t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); })(window, "userloveMethods", "userloveDL", "62ILHR76J6")
+</script>
+<!-- End of Userlove Code Snippet -->
 
   
 
